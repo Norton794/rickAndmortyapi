@@ -3,6 +3,7 @@ import './App.css';
 import {FirstEpisode} from './FirstEpisode';
 import {Navbar} from './Navbar';
 import {Bottom} from './Bottom';
+import { BrowserRouter as Router} from 'react-router-dom';
 
 function App() {
 
