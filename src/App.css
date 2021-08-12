@@ -1,38 +1,229 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ff9800;
+}
+
+
+nav.navbar{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background: #fff;
+  padding-top: 10px; 
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid #ccc;
+  
+}
+
+nav.navbar ul{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 20px; 
+}
+
+nav.navbar ul li{
+  list-style-type: none;
+  padding: 10px 10px;
+  
+}
+
+nav.navbar ul li a{
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 29px;
+  text-transform: capitalize;
+  color: #202329;
+}
+
+nav.navbar ul li a:hover{
+  color: #ff9800;
+}
+
+nav.navbar ul li a.active{
+  color: #ff9800;
+}
+
+h1.title{
+  font-family: 'Segoe UI', sans-serif;
+  font-weight: 900px;
   text-align: center;
+  font-size: 101px;
+  line-height: 111px;
+  color: #202329;
+  margin-top: 65px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.location, .fE{
+  margin-top: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+.location span, .fE span{
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 26px;
+  color: #9e9e9e;
+  display: block;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.location p, .fE p{
+  color: #fff;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 29px;
+}
+
+.location p:hover, .fE p:hover{
+  color: #ff9800;
+}
+
+.all {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  text-align: center;
+  margin-top: 45px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background: rgb(36, 40, 47);
+}
+
+.all .cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.all .cards > div {
+  max-height: 600px;
+  width: 300px;
+  position: relative;
+  cursor: pointer;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  border-radius: 5px;
+  background: rgb(60, 62, 68);
+  padding-bottom: 15px;
+}
+
+.card img {
+  border-radius: 5px 5px 0 0;
+  width: 300px;
+  max-height: 500px;
+}
+
+.card:hover {
+  box-shadow: 5px 12px 20px 5px rgba(0, 0, 0, 0.5);
+}
+
+.card-text {
+  padding: 2px 16px;
+}
+
+
+.card-text h3{
+  font-weight: 800;
+  font-size: 27px;
+  line-height: 30px;
+}
+
+
+.sub-tittle {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  line-height: 26px;
+}
+
+.sub{
+  color: #fff;
+}
+
+
+.pagination {
+  margin-top: 40px;
+  display: inline-block;
+}
+
+.pagination a {
+  cursor: pointer;
+  color: #fff;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.pagination a.active {
+  background: rgb(60, 62, 68);
   color: white;
+  border-radius: 5px;
 }
 
-.App-link {
-  color: #61dafb;
+.pagination a:hover:not(.active) {
+  background-color: #ff9800;
+  color: #fff;
+  border-radius: 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+footer.footer{
+  background: rgb(32, 35, 41);
+  color: rgb(158, 158, 158);
+  padding: 3.5rem 0px;
+  text-align: center;
+}
+
+footer.footer p{
+  line-height: 22px;
+  font-weight: 400;
+  font-size: 16px;
+  color: #9e9e9e;
+}
+
+footer.footer p a{
+  font-weight: 700;
+}
+
+@media (max-width: 600px) {
+  .all .cards {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 30px;
+    margin-top: 40px;
   }
-  to {
-    transform: rotate(360deg);
+  h1.title{
+    font-family: 'Segoe UI', sans-serif;
+    font-weight: 900px;
+    text-align: center;
+    font-size: 75px;
+    line-height: 111px;
+    color: #202329;
+    margin-top: 65px;
+  }
+  .sub-text {
+    max-width: 85%;
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+  footer.footer p a:last-child{
+    display: block;
+    margin-top: 7px;
   }
 }
