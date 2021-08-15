@@ -149,7 +149,7 @@ h1.title{
   box-shadow: 5px 12px 20px 5px rgba(0, 0, 0, 0.5);
 }
 
-.card-text {
+.card-text, .card-textx {
   padding: 2px 16px;
 }
 
@@ -160,6 +160,12 @@ h1.title{
   line-height: 30px;
 }
 
+
+.card-textx h3{
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 30px;
+}
 
 .sub-tittle {
   color: #fff;

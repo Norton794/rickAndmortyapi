@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import {FirstEpisode} from './FirstEpisode';
-
+import { BrowserRouter as Router, Route, Switch, Link} from 'react-router-dom';
 export function Characters() {
     const api = "https://rickandmortyapi.com/api/character";
 
@@ -42,6 +42,8 @@ export function Characters() {
     setPagination(pagination - 1);
   }
 
+  let str = "/character/";
+
   return(
     <div className="all">
     <div className="cards">
@@ -49,11 +51,11 @@ export function Characters() {
       <div className="card" key={index}>
         
           <img src={d.image} alt="" />
-          <a href="#!">
+          <Link to={str + d.id}>
           <div className="card-text">
             <h3> {d.name} </h3>
           </div>
-          </a>
+          </Link>
           <div className="sub-tittle">
           {d.status} - {d.species}
           </div>

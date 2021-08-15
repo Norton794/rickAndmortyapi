@@ -7,6 +7,7 @@ export function FirstEpisode(props){
 
     useEffect(()=>{
         fetch(props.episode[0]).then(response => response.json()).then((json) => {
+          console.log(json);
           setData(json);
         });
       }, []);

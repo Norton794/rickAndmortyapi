@@ -42,8 +42,16 @@ export function Locations(){
             <div className="locations">
                 {data.map((d, index)=> (
                     <div className="loc" key={index}>
-                        <p>Name: {d.name}</p>
-                        <p>Type: {d.type}</p>
+                    <a href="#!">
+                    <div className="card-textx">
+                        <h3>{d.name}</h3>
+                    </div>
+                    </a>
+                    <div className="sub-tittle">
+                    <span>Type:</span>
+                        {d.type}
+                    </div>    
+                        
                         <p>Dimension: {d.dimension}</p>
                     </div>
                 ))}
