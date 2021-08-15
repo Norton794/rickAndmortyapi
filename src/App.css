@@ -107,6 +107,23 @@ h1.title{
   margin-top: 40px;
 }
 
+
+.all .locations{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  max-width: 95%;
+}
+
+.all .locations .loc{
+  list-style-type: none;
+  background: rgb(60, 62, 68);
+  color: #fff;
+  padding: 10px 10px;
+  border-radius: 0.5rem;
+}
+
+
 .all .cards > div {
   max-height: 600px;
   width: 300px;
