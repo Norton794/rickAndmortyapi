@@ -62,7 +62,7 @@ export function Characters() {
 
           <div className="location">
             <span>Last Known Location:</span>
-            <p> <a href={d.location.url}>{d.location.name}</a></p>
+            <p> <Link to={`/location/${d.location.url.substring(41)}`}>{d.location.name}</Link></p>
           </div>
 
           <FirstEpisode episode={d.episode}/>
