@@ -4,8 +4,10 @@ import {Navbar} from './Navbar';
 import {Bottom} from './Bottom';
 import {Characters} from './Characters';
 import {Episodes} from './Episodes';
-import {Locations} from './Locations.js';
-import {Character} from './Character.js';
+import {Locations} from './Locations';
+import {Character} from './Character';
+import {Location} from './Location';
+import { Episode } from './Episode';
 import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
 function App() {
@@ -18,6 +20,12 @@ function App() {
       <Switch>
       <Route path="/character/:id">
         <Character />
+      </Route>
+      <Route path="/location/:id">
+        <Location />
+      </Route>
+      <Route path="/episode/:id">
+        <Episode />
       </Route>
       <Route path="/locations">
         <Locations />

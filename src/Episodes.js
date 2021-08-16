@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 export function Episodes(){
     const api = "https://rickandmortyapi.com/api/episode";
@@ -41,11 +42,11 @@ export function Episodes(){
         <div className="episodes">
             {data.map((d, index)=> (
                 <div className="eps" key={index}>
-                <a href="#!">
+                <Link to={`/episode/${d.id}`}>
                 <div className="card-textx">
                     <h3>{d.name} </h3>
                 </div>
-                </a>
+                </Link>
                 <div className="ep">
                     <span>Episode: </span>
                     <p>{d.episode}</p>

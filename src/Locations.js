@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 
 export function Locations(){
@@ -42,11 +43,11 @@ export function Locations(){
             <div className="locations">
                 {data.map((d, index)=> (
                     <div className="loc" key={index}>
-                    <a href="#!">
+                    <Link to={`/location/${d.id}`}>
                     <div className="card-textx">
                         <h3>{d.name}</h3>
                     </div>
-                    </a>
+                    </Link>
                     <div className="loc-type">
                     <span>Type: </span>
                         <p>{d.type}</p>

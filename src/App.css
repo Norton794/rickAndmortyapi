@@ -156,6 +156,11 @@ h1.title{
 }
 
 
+.card .card-text{
+  color: #fff;
+}
+
+
 .card-text h3{
   font-weight: 800;
   font-size: 27px;
