@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
-
+import { useParams, Link } from 'react-router-dom';
 import { Eps } from './Eps';
 
 export const Character = () => {
@@ -10,14 +9,13 @@ export const Character = () => {
 
   useEffect(() => {
     fetch(api).then(response => response.json()).then((json) => {
-      //console.log(json.location.name);
       setData(json);
     });
   });
 
   return (
     <div className="all">
-      <div className="">
+      <div className="profile">
         <div className="profile-image">
           <img src={data.image} alt={data.name} />
         </div>
@@ -28,26 +26,29 @@ export const Character = () => {
           {data.status} - {data.species}
         </div>
         <div className="profile-gender">
-          Gender: {data.gender}
+          <span>Gender:</span>
+          <p>{data.gender}</p>
         </div>
         <div className="profile-origin">
           <span>Origin: </span>
-          <a href={data.origin && data.origin.url}>{data.origin && data.origin.name}</a>
+
+          <p> <Link to={`/location/${data.origin && data.origin.url.substring(41)}`}>{data.origin && data.origin.name}</Link></p>
         </div>
         <div className="profile-location">
           <span>Location: </span>
-          <a href={data.location && data.location.url}>{data.location && data.location.name}</a>
+
+          <p><Link to={`/location/${data.location && data.location.url.substring(41)}`}>{data.location && data.location.name}</Link></p>
         </div>
 
-
+        <p className="where"><h3>Episodes where it appeared:</h3></p>
         <div className="episodes">
-            {data.episode && data.episode.map((r, i) => (
-                    <Eps url={r} key={i}/>
-            ))}
+          {data.episode && data.episode.map((r, i) => (
+            <Eps url={r} key={i} />
+          ))}
         </div>
 
 
-        
+
       </div>
     </div>
   );

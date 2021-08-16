@@ -15,6 +15,17 @@ export function Episode() {
     return (
         <div className="all">
             <h2>{data.name}</h2>
+            <div className="ep">
+                <span>Episode: </span>
+                <p>{data.episode}</p>
+            </div>
+            <div className="ep">
+                <span>Aired in: </span>
+                <p>{data.air_date}</p>
+            </div>
+
+            <p className="where"><h3>CHARACTERS in the EPISODE:</h3></p>
+
             <div className="cards">
             {data.characters && data.characters.map((r, i) => (
                     <Individual url={r} key={i}/>
