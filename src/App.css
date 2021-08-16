@@ -4,6 +4,7 @@
 a {
   color: #fff;
   text-decoration: none;
+  cursor: pointer;
 }
 
 a:hover {
@@ -50,7 +51,7 @@ nav.navbar ul li a:hover{
   color: #ff9800;
 }
 
-nav.navbar ul li a.active{
+nav.navbar ul li a.active:last-child{
   color: #ff9800;
 }
 
@@ -64,12 +65,12 @@ h1.title{
   margin-top: 65px;
 }
 
-.location, .fE{
+.location, .fE, .loc-type{
   margin-top: 10px;
 }
 
 
-.location span, .fE span{
+.location span, .fE span, .loc-type span{
   font-weight: 500;
   font-size: 16px;
   line-height: 26px;
@@ -77,14 +78,14 @@ h1.title{
   display: block;
 }
 
-.location p, .fE p{
+.location p, .fE p, .loc-type p{
   color: #fff;
   font-weight: 400;
   font-size: 18px;
   line-height: 29px;
 }
 
-.location p:hover, .fE p:hover{
+.location p:hover, .fE p:hover, .loc-type p:hover{
   color: #ff9800;
 }
 

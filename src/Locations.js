@@ -47,21 +47,23 @@ export function Locations(){
                         <h3>{d.name}</h3>
                     </div>
                     </a>
-                    <div className="sub-tittle">
-                    <span>Type:</span>
-                        {d.type}
+                    <div className="loc-type">
+                    <span>Type: </span>
+                        <p>{d.type}</p>
                     </div>    
-                        
-                        <p>Dimension: {d.dimension}</p>
+                    <div className="loc-type">
+                    <span>Dimension: </span>    
+                        <p>{d.dimension}</p>
+                    </div>
                     </div>
                 ))}
             </div>
             <div className="pagination">
-                <a href="#title" onClick={handleClickFirst}>&laquo;</a>
-                <a href="#title" style={{display: pag.prev ? "block" : "none" }} onClick={handleBack}>{pagination - 1}</a>
-                <a href="#title" className="active">{pagination}</a>
-                <a href="#title" style={{display: pag.next ? "block" : "none" }} onClick={handleForward}>{pagination + 1}</a>
-                <a href="#title" onClick={handleClickLast}>&raquo;</a>
+                <a href="#all" onClick={handleClickFirst}>&laquo;</a>
+                <a href="#all" style={{display: pag.prev ? "block" : "none" }} onClick={handleBack}>{pagination - 1}</a>
+                <a href="#all" className="active">{pagination}</a>
+                <a href="#all" style={{display: pag.next ? "block" : "none" }} onClick={handleForward}>{pagination + 1}</a>
+                <a href="#all" onClick={handleClickLast}>&raquo;</a>
             </div>
         </div>
     );

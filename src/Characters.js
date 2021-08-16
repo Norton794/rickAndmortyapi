@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import {FirstEpisode} from './FirstEpisode';
-import { BrowserRouter as Router, Route, Switch, Link} from 'react-router-dom';
+import { Link} from 'react-router-dom';
 export function Characters() {
     const api = "https://rickandmortyapi.com/api/character";
 
@@ -45,7 +45,7 @@ export function Characters() {
   let str = "/character/";
 
   return(
-    <div className="all">
+    <div className="all" id="all">
     <div className="cards">
     {data.map((d, index)=> (
       <div className="card" key={index}>
@@ -72,11 +72,11 @@ export function Characters() {
     </div>
 
     <div className="pagination">
-      <a href="#title" onClick={handleClickFirst}>&laquo;</a>
-      <a href="#title" style={{display: pag.prev ? "block" : "none" }} onClick={handleBack}>{pagination - 1}</a>
-      <a href="#title" className="active">{pagination}</a>
-      <a href="#title" style={{display: pag.next ? "block" : "none" }} onClick={handleForward}>{pagination + 1}</a>
-      <a href="#title" onClick={handleClickLast}>&raquo;</a>
+      <a href="#all" onClick={handleClickFirst}>&laquo;</a>
+      <a href="#all" style={{display: pag.prev ? "block" : "none" }} onClick={handleBack}>{pagination - 1}</a>
+      <a href="#all" className="active">{pagination}</a>
+      <a href="#all" style={{display: pag.next ? "block" : "none" }} onClick={handleForward}>{pagination + 1}</a>
+      <a href="#all" onClick={handleClickLast}>&raquo;</a>
     </div>
 
   </div>
