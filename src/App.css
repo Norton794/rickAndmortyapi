@@ -120,7 +120,7 @@ h1.title{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 15px;
-  max-width: 80%;
+  max-width: 85%;
   margin: 0 auto;
   margin-top: 15px;
 }
