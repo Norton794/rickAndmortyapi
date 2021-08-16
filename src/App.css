@@ -160,11 +160,25 @@ h1.title{
   color: #fff;
 }
 
+h2{
+  margin-top: 15px;
+  font-weight: 800;
+  font-size: 35px;
+  line-height: 30px;
+  color: #fff;
+}
 
 .card-text h3{
   font-weight: 800;
   font-size: 27px;
   line-height: 30px;
+}
+
+.card-text h3:hover{
+  font-weight: 800;
+  font-size: 27px;
+  line-height: 30px;
+  color: #ff9800;
 }
 
 
@@ -230,6 +244,13 @@ footer.footer p{
 footer.footer p a{
   font-weight: 700;
 }
+
+
+
+.profile-location{
+  margin-bottom: 20px;
+}
+
 
 @media (max-width: 600px) {
   .all .cards {

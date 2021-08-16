@@ -14,7 +14,7 @@ export function Location() {
     });
     return (
         <div className="all">
-            <h3>{data.name}</h3>
+            <h2>{data.name}</h2>
             <div className="cards">
             {data.residents && data.residents.map((r, i) => (
                     <Individual url={r} key={i}/>

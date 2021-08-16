@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { FirstEpisode } from './FirstEpisode';
+import { Link } from 'react-router-dom';
 
 export function Individual(props) {
 
@@ -17,7 +18,7 @@ export function Individual(props) {
             <img src={data.image} alt="" />
 
             <div className="card-text">
-                <h3> {data.name} </h3>
+                <Link to={`/character/${data.id}`}><h3> {data.name} </h3></Link>
             </div>
 
             <div className="sub-tittle">
