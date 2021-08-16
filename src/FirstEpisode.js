@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './App.css';
+
 
 export function FirstEpisode(props){
     const lnk = props.episode[0];

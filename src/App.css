@@ -65,12 +65,12 @@ h1.title{
   margin-top: 65px;
 }
 
-.location, .fE, .loc-type{
+.location, .fE, .loc-type, .ep{
   margin-top: 10px;
 }
 
 
-.location span, .fE span, .loc-type span{
+.location span, .fE span, .loc-type span, .ep span{
   font-weight: 500;
   font-size: 16px;
   line-height: 26px;
@@ -78,14 +78,14 @@ h1.title{
   display: block;
 }
 
-.location p, .fE p, .loc-type p{
+.location p, .fE p, .loc-type p, .ep p{
   color: #fff;
   font-weight: 400;
   font-size: 18px;
   line-height: 29px;
 }
 
-.location p:hover, .fE p:hover, .loc-type p:hover{
+.location p:hover, .fE p:hover, .loc-type p:hover, .ep p:hover{
   color: #ff9800;
 }
 
@@ -109,14 +109,14 @@ h1.title{
 }
 
 
-.all .locations{
+.all .locations, .all .episodes{
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 30px;
   max-width: 95%;
 }
 
-.all .locations .loc{
+.all .locations .loc, .all .episodes .eps{
   list-style-type: none;
   background: rgb(60, 62, 68);
   color: #fff;
@@ -138,6 +138,7 @@ h1.title{
   border-radius: 5px;
   background: rgb(60, 62, 68);
   padding-bottom: 15px;
+  border-radius: 0.5rem;
 }
 
 .card img {
