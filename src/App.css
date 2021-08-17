@@ -62,7 +62,8 @@ h1.title{
   font-size: 101px;
   line-height: 111px;
   color: #202329;
-  margin-top: 65px;
+  margin-top: 85px;
+  margin-bottom: 25px;
 }
 
 .location, .fE, .loc-type, .ep, .profile-gender, .profile-origin, .profile-location{
@@ -290,8 +291,8 @@ footer.footer p a{
     font-size: 75px;
     line-height: 111px;
     color: #202329;
-    margin-top: 85px;
-    margin-bottom: 25px;
+    margin-top: 65px;
+    margin-bottom: 15px;
   }
   .sub-text {
     max-width: 85%;
