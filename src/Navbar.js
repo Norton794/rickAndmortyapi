@@ -5,9 +5,9 @@ export const Navbar = () =>{
     return(
         <nav className="navbar">
         <ul>
-          <li><NavLink exact  to="rickAndmortyapi/">characters</NavLink> </li>
-          <li><NavLink exact  to="rickAndmortyapi/locations">locations</NavLink></li>
-          <li><NavLink exact  to="rickAndmortyapi/episodes">episodes</NavLink></li>
+          <li><NavLink exact  to="/">characters</NavLink> </li>
+          <li><NavLink exact  to="/locations/">locations</NavLink></li>
+          <li><NavLink exact  to="/episodes/">episodes</NavLink></li>
         </ul>
       </nav>
     );
