@@ -63,7 +63,7 @@ h1.title{
   line-height: 111px;
   color: #202329;
   margin-top: 85px;
-  margin-bottom: 25px;
+  
 }
 
 .location, .fE, .loc-type, .ep, .profile-gender, .profile-origin, .profile-location{
@@ -96,9 +96,9 @@ h1.title{
   align-items: center;
   justify-content: center;
   text-align: center;
-  margin-top: 45px;
+  margin-top: 65px;
   padding-top: 40px;
-  padding-bottom: 40px;
+  padding-bottom: 80px;
   background: rgb(36, 40, 47);
 }
 
@@ -119,11 +119,11 @@ h1.title{
 
 .all .episodes{
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 15px;
-  max-width: 85%;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 40px;
+  max-width: 90%;
   margin: 0 auto;
-  margin-top: 15px;
+  margin-top: 60px;
 }
 
 
@@ -227,7 +227,7 @@ h2{
 }
 
 .pagination {
-  margin-top: 40px;
+  margin-top: 80px;
   display: inline-block;
 }
 
@@ -255,14 +255,14 @@ h2{
 footer.footer{
   background: rgb(32, 35, 41);
   color: rgb(158, 158, 158);
-  padding: 3.5rem 0px;
+  padding: 4.5rem 30px;
   text-align: center;
 }
 
 footer.footer p{
   line-height: 22px;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 18px;
   color: #9e9e9e;
 }
 
@@ -278,7 +278,21 @@ footer.footer p a{
 
 
 @media (max-width: 600px) {
-  .all .cards {
+
+  nav.navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    padding-top: 10px; 
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid #ccc;
+    
+  }
+  .all .cards, .all .episodes, .all .locations {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: 30px;
@@ -303,4 +317,6 @@ footer.footer p a{
     display: block;
     margin-top: 7px;
   }
+
+
 }
