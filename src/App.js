@@ -12,9 +12,8 @@ import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
 function App() {
 
-  
   return (
-    <Router>
+    <Router basename="/rickAndmortyapi">
       <Navbar />
       <h1 className="title" id="title">Consuming the Rick and Morty API</h1>
       <Switch>
