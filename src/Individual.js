@@ -27,10 +27,12 @@ export function Individual(props) {
 
             <div className="location">
                 <span>Last Known Location:</span>
-                <p> <a href={data.location && data.location.url}>{data.location && data.location.name}</a></p>
+                <p>
+                    <Link to={`/location/${data.location && data.location.url.substring(41)}`}>{data.location && data.location.name}</Link>
+                </p>
             </div>
 
-            <FirstEpisode episode={data.episode}/>
+            <FirstEpisode episode={data.episode} />
         </div>
     );
 }
