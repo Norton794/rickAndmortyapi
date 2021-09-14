@@ -10,7 +10,7 @@
 =================
 <!--ts-->
    * [About](#About)
-   * [Tabela de Conteudo](#Content)
+   * [Content Table](#Content)
    * [Prerequisites](#Prerequisites)
    * [Installation](#Installation)
    * [Tecnologias](#tecnologias)
