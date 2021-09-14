@@ -1,10 +1,10 @@
-# Consuming the Rick and Morty API - English
+# Consuming the Rick and Morty API - [Check it out](https://norton794.github.io/rickAndmortyapi/)
 
 #### Status:  🚧 Finishing... 🚧
 
 ## #About
 ## Basic project in React.JS for study in how to consume an API, Hooks, and React Router DOM. I used [The Rick and Morty API](https://rickandmortyapi.com/) for the Back-End.
-### The style in the Front-End was inspired by their site. [Check it out](https://norton794.github.io/rickAndmortyapi/)
+### The style in the Front-End was inspired by their site. 
 
 ## #Content Table
 =================
