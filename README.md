@@ -1,4 +1,4 @@
-# Consuming the Rick and Morty API - [Check it out](https://norton794.github.io/rickAndmortyapi/)
+# Consuming the Rick and Morty API
 
 #### Status:  🚧 Finishing... 🚧
 
