@@ -1,30 +1,31 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-export function Eps(props) {
+export function Eps({url}) {
 
-    const api = props.url;
+    const api = url;
     const [data, setData] = useState([]);
     useEffect(() => {
         fetch(api).then(response => response.json()).then((json) => {
             setData(json);
-        });
-    });
+        }); 
+    }, [api]);
+    let {id, name, episode, air_date} = data;
 
     return (
         <div className="eps" >
-            <Link to={`/episode/${data.id}`}>
+            <Link to={`/episode/${id}`}>
                 <div className="card-textx">
-                    <h3>{data.name} </h3>
+                    <h3>{name} </h3>
                 </div>
             </Link>
             <div className="ep">
                 <span>Episode: </span>
-                <p>{data.episode}</p>
+                <p>{episode}</p>
             </div>
             <div className="ep">
                 <span>Aired in: </span>
-                <p>{data.air_date}</p>
+                <p>{air_date}</p>
             </div>
         </div>
     );

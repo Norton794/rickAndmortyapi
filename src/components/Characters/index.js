@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import './App.css';
-import {FirstEpisode} from './FirstEpisode';
+import { FirstEpisode } from '../FirstEpisode'; 
 import { Link} from 'react-router-dom';
+import { API_CHARACTER } from '../../constants/index';
 export function Characters() {
-    const api = "https://rickandmortyapi.com/api/character";
+    
 
-  const [resource, setResource] = useState(api);
+  const [resource, setResource] = useState(API_CHARACTER);
   const [data, setData] = useState([]);
   const [pag, setPag] = useState({});
   const [pagination, setPagination] = useState(1);
@@ -17,17 +17,19 @@ export function Characters() {
       setData(json.results);
       setPag(json.info);
     });
+
+   
   }, [resource]);
 
 
   const handleClickFirst = () =>{
-    setResource(api);
+    setResource(API_CHARACTER);
     setPagination(1);
   }
   
 
   const handleClickLast = () =>{
-    let str = api +"/?page="+pag.pages;
+    let str = API_CHARACTER +"/?page="+pag.pages;
     setResource(str);
     setPagination(pag.pages);
   }
@@ -44,11 +46,14 @@ export function Characters() {
 
   let str = "/character/";
 
+
   return(
     <div className="all" id="all">
     <div className="cards">
-    {data.map((d, index)=> (
-      <div className="card" key={index}>
+
+
+    {data.map((d)=> (
+      <div className="card" key={d.id}>
         
           <img src={d.image} alt="" />
           <Link to={str + d.id}>

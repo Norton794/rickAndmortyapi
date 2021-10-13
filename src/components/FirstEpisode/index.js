@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-export function FirstEpisode(props) {
-  const lnk = props.episode && props.episode[0];
+export function FirstEpisode({episode}) {
+  const lnk = episode && episode[0];
   const [data, setData] = useState([]);
 
   
@@ -11,16 +11,16 @@ export function FirstEpisode(props) {
       setData(json);
     });
 
-    return(()=>{
-      setData([]);
-    });
+    
 
   }, [lnk]);
+
+  let {id, name} = data;
 
   return (
     <div className="fE">
       <span>First seen in:</span>
-      <p> <Link to={`episode/${data.id}`}>{data.name}</Link></p>
+      <p> <Link to={`episode/${id}`}>{name}</Link></p>
     </div>
   );
 }

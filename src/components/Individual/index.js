@@ -1,15 +1,17 @@
 import React, { useState, useEffect } from 'react';
-import { FirstEpisode } from './FirstEpisode';
+import { FirstEpisode } from '../FirstEpisode';
 import { Link } from 'react-router-dom';
 
-export function Individual(props) {
+export function Individual({url}) {
 
-    const api = props.url;
+    
     const [data, setData] = useState([]);
     useEffect(() => {
-        fetch(api).then(response => response.json()).then((json) => {
+        fetch(url).then(response => response.json()).then((json) => {
             setData(json);
         });
+
+       
     });
 
     return (

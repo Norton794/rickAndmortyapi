@@ -1,15 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from "react-router-dom";
-import { Individual } from './Individual';
-
+import { Individual } from '../Individual';
+import { API_EPISODE } from '../../constants/index';
 export function Episode() {
     const { id } = useParams();
-    const api = "https://rickandmortyapi.com/api/episode/"+id;
+    const api = API_EPISODE+id;
     const [data, setData] = useState([]);
     useEffect(() => {
         fetch(api).then(response => response.json()).then((json) => {
             setData(json);
         });
+
+      
 
     });
     return (
@@ -24,7 +26,7 @@ export function Episode() {
                 <p>{data.air_date}</p>
             </div>
 
-            <p className="where"><h3>CHARACTERS in the EPISODE:</h3></p>
+            <p className="where">CHARACTERS in the EPISODE:</p>
 
             <div className="cards">
             {data.characters && data.characters.map((r, i) => (

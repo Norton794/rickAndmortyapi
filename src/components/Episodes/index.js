@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-
+import { API_EPISODE } from '../../constants/index';
 export function Episodes(){
-    const api = "https://rickandmortyapi.com/api/episode";
-    const [resource, setResource] = useState(api);
+    
+    const [resource, setResource] = useState(API_EPISODE);
     const [data, setData] = useState([]);
     const [pag, setPag] = useState({});
     const [pagination, setPagination] = useState(1);
@@ -13,16 +13,18 @@ export function Episodes(){
         setData(json.results);
         setPag(json.info);
         });
+
+       
     }, [resource]);
 
     const handleClickFirst = () =>{
-    setResource(api);
+    setResource(API_EPISODE);
     setPagination(1);
   }
   
 
   const handleClickLast = () =>{
-    let str = api +"/?page="+pag.pages;
+    let str = API_EPISODE +"/?page="+pag.pages;
     setResource(str);
     setPagination(pag.pages);
   }
@@ -40,8 +42,8 @@ export function Episodes(){
   return(
     <div className="all">
         <div className="episodes">
-            {data.map((d, index)=> (
-                <div className="eps" key={index}>
+            {data.map((d)=> (
+                <div className="eps" key={d.id}>
                 <Link to={`/episode/${d.id}`}>
                 <div className="card-textx">
                     <h3>{d.name} </h3>

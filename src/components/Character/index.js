@@ -1,17 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { Eps } from './Eps';
-
+import { Eps } from '../Eps/index';
+import { API_CHARACTER } from '../../constants/index';
 export const Character = () => {
   const { id } = useParams();
-  const api = "https://rickandmortyapi.com/api/character/" + id;
+  const api = API_CHARACTER + id;
   const [data, setData] = useState([]);
 
   useEffect(() => {
     fetch(api).then(response => response.json()).then((json) => {
       setData(json);
     });
-  });
+
+
+  }, [api]);
+
 
   return (
     <div className="all">
@@ -40,7 +43,7 @@ export const Character = () => {
           <p><Link to={`/location/${data.location && data.location.url.substring(41)}`}>{data.location && data.location.name}</Link></p>
         </div>
 
-        <p className="where"><h3>Episodes where it appeared:</h3></p>
+        <p className="where">Episodes where it appeared:</p>
         <div className="episodes">
           {data.episode && data.episode.map((r, i) => (
             <Eps url={r} key={i} />

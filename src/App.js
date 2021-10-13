@@ -1,13 +1,13 @@
 import React from 'react';
 import './App.css';
-import {Navbar} from './Navbar';
-import {Bottom} from './Bottom';
-import {Characters} from './Characters';
-import {Episodes} from './Episodes';
-import {Locations} from './Locations';
-import {Character} from './Character';
-import {Location} from './Location';
-import { Episode } from './Episode';
+import {Navbar} from './components/Navbar/index';
+import { Bottom } from './components/Bottom/index';
+import {Characters} from './components/Characters/index';
+import {Episodes} from './components/Episodes/index';
+import {Locations} from './components/Locations/index';
+import {Character} from './components/Character/index';
+import {Location} from './components/Location/index';
+import { Episode } from './components/Episode/index';
 import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
 function App() {

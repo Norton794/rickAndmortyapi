@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
 
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
 a {
   color: #fff;
@@ -11,49 +19,6 @@ a:hover {
   color: #ff9800;
 }
 
-
-nav.navbar{
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  background: #fff;
-  padding-top: 10px; 
-  width: 100%;
-  position: fixed;
-  top: 0;
-  z-index: 100;
-  border-bottom: 1px solid #ccc;
-  
-}
-
-nav.navbar ul{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-right: 20px; 
-}
-
-nav.navbar ul li{
-  list-style-type: none;
-  padding: 10px 10px;
-  
-}
-
-nav.navbar ul li a{
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 29px;
-  text-transform: capitalize;
-  color: #202329;
-}
-
-nav.navbar ul li a:hover{
-  color: #ff9800;
-}
-
-nav.navbar ul li a.active:last-child{
-  color: #ff9800;
-}
 
 h1.title{
   font-family: 'Segoe UI', sans-serif;
@@ -252,23 +217,7 @@ h2{
   border-radius: 5px;
 }
 
-footer.footer{
-  background: rgb(32, 35, 41);
-  color: rgb(158, 158, 158);
-  padding: 4.5rem 30px;
-  text-align: center;
-}
 
-footer.footer p{
-  line-height: 22px;
-  font-weight: 400;
-  font-size: 18px;
-  color: #9e9e9e;
-}
-
-footer.footer p a{
-  font-weight: 700;
-}
 
 
 
